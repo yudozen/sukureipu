@@ -9,10 +9,20 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
-      - name: Dummy
+      - name: Info
         run: |
-          echo 123
+          echo start
+          hostname
+          whoami
           cat /proc/cpuinfo
           cat /proc/meminfo
           free
           vmstat
+          pwd
+          ls -la
+
+      - name: Build
+        run: |
+          make build
+          docker images
+          docker ps -a
