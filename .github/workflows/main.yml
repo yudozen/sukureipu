@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 1
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
       - name: Info
         run: |
           echo start
