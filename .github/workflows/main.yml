@@ -12,3 +12,7 @@ jobs:
       - name: Dummy
         run: |
           echo 123
+          cat /proc/cpuinfo
+          cat /proc/meminfo
+          free
+          vmstat
